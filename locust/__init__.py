@@ -10,9 +10,9 @@ if os.getenv("LOCUST_PLAYWRIGHT", None):
         # dont show a massive callstack if trio is not installed
         os._exit(1)
 
-from gevent import monkey
-
-monkey.patch_all()
+# from gevent import monkey
+#
+# monkey.patch_all()
 
 from ._version import version as __version__
 from .user.sequential_taskset import SequentialTaskSet
